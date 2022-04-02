@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 90%;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+    padding: 25px;
+
+    .photo{
+        height: 55%;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+
+        &::before{
+            content: url('./images/icon-view.svg');
+            width: auto;
+            height: 20px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 49%;
+            transform: translateX(-50%);
+            z-index: 1221;
+            opacity: 0;
+            transition: all .3s linear;
+        }
+        
+        &::after{
+            content:'';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 255, 247,0.7);
+            width: 100%;
+            height: 99%;
+            z-index:999;
+            border-radius: 15px;
+            opacity: 0;
+            transition: all .3s linear;
+        }
+
+        &:hover::after,&:hover::before{
+            opacity: 1;
+        }
+
+        
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+    }
+
+    .cryptho{
+        flex-basis: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        &__name{
+            color: white;
+        }
+
+        &__info{
+            font-size: 18px;
+            color:hsl(215, 51%, 70%);
+            font-weight: 300;
+        }
+
+        &__offer{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            .price{
+                color: hsl(178, 100%, 50%);
+                position: relative;
+                font-size: 18px;
+                line-height: 18px;
+                margin-left: 18px;
+                
+                
+                &::before{
+                    content: url('./images/icon-ethereum.svg');
+                    position: absolute;
+                    height: 100%;
+                    width: 10px;
+                    left: -18px;
+                    
+                    
+                }
+            }
+            .time-to-end{
+                position: relative;
+                font-size: 18px;
+                color:hsl(215, 51%, 70%);
+                font-weight: 300;
+                line-height: 18px;
+
+                &::before{
+                    content: url('./images/icon-clock.svg');
+                    position: absolute;
+                    height: 100%;
+                    width: 10px;
+                    left: -18px;
+                }
+            }
+        }
+
+        &::after{
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: hsl(215, 32%, 27%);
+        }
+    }
+
+    .author{
+        display: flex;
+        flex-grow: 1;
+        width: 100%;
+        margin-top: 5px;
+        &__photo{
+            height: 45px;
+            width: auto;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-right: 15px;
+
+        }
+        &__intro{
+            display: flex;
+            align-items: center;
+        }
+
+        &__name{
+            color: white;
+        }
+
+        &__intro{
+            color: hsl(215, 51%, 70%);
+            font-weight: 300;
+        }
+    }
+}
+
+
+
