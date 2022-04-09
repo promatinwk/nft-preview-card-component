@@ -47,6 +47,7 @@ main .photo {
   text-align: center;
   cursor: pointer;
   position: relative;
+  width: 100%;
 }
 
 main .photo::before {
@@ -56,7 +57,7 @@ main .photo::before {
   display: block;
   position: absolute;
   left: 50%;
-  top: 49%;
+  top: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 1221;
@@ -73,7 +74,7 @@ main .photo::after {
   top: 0;
   background-color: rgba(0, 255, 247, 0.7);
   width: 100%;
-  height: 99%;
+  height: 100%;
   z-index: 999;
   border-radius: 15px;
   opacity: 0;
@@ -87,8 +88,8 @@ main .photo:hover::after, main .photo:hover::before {
 
 main .photo img {
   display: block;
+  height: 100%;
   width: 100%;
-  height: auto;
   border-radius: 15px;
 }
 
@@ -108,12 +109,19 @@ main .cryptho {
 
 main .cryptho__name {
   color: white;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+main .cryptho__name:hover {
+  cursor: pointer;
+  color: #00fff7;
 }
 
 main .cryptho__info {
   font-size: 18px;
   color: #8bacda;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 main .cryptho__offer {
@@ -123,15 +131,15 @@ main .cryptho__offer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 main .cryptho__offer .price {
   color: #00fff7;
   position: relative;
-  font-size: 18px;
-  line-height: 18px;
-  margin-left: 18px;
+  font-size: 16px;
+  line-height: 16px;
+  margin-left: 16px;
 }
 
 main .cryptho__offer .price::before {
@@ -144,10 +152,10 @@ main .cryptho__offer .price::before {
 
 main .cryptho__offer .time-to-end {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   color: #8bacda;
   font-weight: 300;
-  line-height: 18px;
+  line-height: 16px;
 }
 
 main .cryptho__offer .time-to-end::before {
@@ -155,7 +163,7 @@ main .cryptho__offer .time-to-end::before {
   position: absolute;
   height: 100%;
   width: 10px;
-  left: -18px;
+  left: -16px;
 }
 
 main .cryptho::after {
@@ -195,10 +203,103 @@ main .author__intro {
 
 main .author__name {
   color: white;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+main .author__name:hover {
+  cursor: pointer;
+  color: #00fff7;
 }
 
 main .author__intro {
   color: #8bacda;
   font-weight: 300;
+}
+
+.attribution {
+  display: none;
+}
+
+@media screen and (min-width: 390px) {
+  main {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 410px) {
+  main {
+    width: 83%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  main {
+    width: 67%;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  main {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  main {
+    width: 57%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  main {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  main {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    width: 24%;
+    -webkit-box-shadow: 0px 25px 1px 20px #101a28;
+            box-shadow: 0px 25px 1px 20px #101a28;
+    position: relative;
+  }
+  main::after {
+    content: '';
+    width: 120%;
+    height: 120%;
+    background-color: rgba(10, 25, 59, 0.2);
+    position: absolute;
+    left: -10%;
+    top: -5%;
+    z-index: -3;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  main {
+    width: 18%;
+    -webkit-box-shadow: 0px 25px 1px 20px #101a28;
+            box-shadow: 0px 25px 1px 20px #101a28;
+    position: relative;
+  }
+  main::after {
+    content: '';
+    width: 120%;
+    height: 120%;
+    background-color: rgba(10, 25, 59, 0.2);
+    position: absolute;
+    left: -10%;
+    top: -5%;
+    z-index: -3;
+    border-radius: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
